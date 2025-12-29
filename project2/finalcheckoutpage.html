@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Select Payment Method</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="finalcart.css">
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="images/logo.png" class="logo-img">
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+
+    <main class="main-content">
+        <div class="payment-container">
+            <h2>Select Payment Method</h2>
+
+            <div class="payment-options">
+                <!-- Stripe -->
+                <a href="stripe-payment.html" class="payment-option stripe">
+                    Pay with Card (Stripe)
+                </a>
+
+                <!-- PayPal -->
+                <a href="paypal-payment.html" class="payment-option paypal">
+                    Pay with PayPal
+                </a>
+
+                <!-- Crypto -->
+                <a href="crypto-payment.html" class="payment-option crypto">
+                    Pay with Crypto Wallet
+                </a>
+            </div>
+
+            <p class="note">
+                You will be redirected to complete your payment securely.
+            </p>
+        </div>
+    </main>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="app-logo">
+                    <!-- Google Play -->
+                    <a href="#" class="store-link google-play" title="Coming soon on Google Play">
+                        <img src="images/gogplay.webp" alt="Get it on Google Play">
+                    </a>
+
+                    <!-- Apple App Store -->
+                    <a href="#" class="store-link app-store" title="Coming soon on the App Store">
+                        <img src="images/aplapp.png" alt="Download on the App Store">
+                    </a>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> coupons</li>
+                        <li> BLog Post</li>
+                        <li> Return Policy</li>
+                        <li> Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> Facebook</li>
+                        <li> Twitter</li>
+                        <li> logo-instagram</li>
+                        <li> gmail</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="Clone Cartel Holding Co">Clone Cartel Holding Co</p>
+
+        </div>
+    </div>
+
+</body>
+<script src="cart.js"></script>
+
+</html>

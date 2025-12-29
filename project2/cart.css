@@ -1,0 +1,520 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(238, 241, 236);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- TOP BAR ---------- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #222;
+}
+
+.search-input {
+    height: 40px;
+    padding: 0 12px;
+}
+
+.search-btn {
+    height: 40px;
+    padding: 0 16px;
+    background: #ff7200;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 60px;
+    background: #222;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+}
+
+#MenuItems {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#MenuItems li {
+    position: relative;
+}
+
+#MenuItems>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+#MenuItems a {
+    color: #faf5f5;
+    text-decoration: none;
+    font-weight: normal;
+    transition: #ff7200 0.2s ease;
+    padding: 8px 0;
+}
+
+#MenuItems>li>a:hover {
+    color: #ff7200;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #333;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    left: 0;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: #666;
+    /* dark grey */
+    font-weight: normal;
+}
+
+/* dropdown hover */
+.dropdown-menu a:hover {
+    color: #ff7200;
+}
+
+/* show dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ---------- CART ---------- */
+.cart-page {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #ff523b;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+.cart-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-info img {
+    width: 80px;
+}
+
+td input {
+    width: 60px;
+    height: 35px;
+}
+
+/* ---------- TOTALS ---------- */
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.total-price table {
+    max-width: 400px;
+    border-top: 3px solid #ff523b;
+}
+
+.total-price td:last-child {
+    text-align: right;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #000;
+    color: #555;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer h3 {
+    color: #ff523b;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+#cart-count {
+    background: #ff7200;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* ---------- CHECKOUT ALIGNMENT ---------- */
+.checkout-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* aligns everything right */
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+/* ---------- CHECKOUT BUTTON ---------- */
+.checkout-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    /* controlled width */
+    height: 48px;
+    /* clean height */
+
+    margin-top: 20px;
+
+    background: #ff7200;
+    color: #000;
+    font-weight: 800;
+    font-size: 15px;
+
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #000;
+
+    transition: all 0.2s ease;
+}
+
+
+.checkout-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.total-price table td {
+    padding: 12px 8px;
+    font-size: 15px;
+}
+
+.total-price tr:last-child td {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cart-icon:hover {
+    opacity: 0.85;
+}
+
+.payment-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-form label {
+    font-weight: bold;
+    align-items: center;
+}
+
+.payment-form input {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.payment-row {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-row div {
+    flex: 1;
+}
+
+/* ---------- FOOTER LAYOUT ---------- */
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* allows wrapping on small screens */
+}
+
+/* Footer columns */
+.footer-col-1,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Footer lists */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Footer divider */
+.footer hr {
+    border: none;
+    height: 1px;
+    background: #333;
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* Footer bottom text */
+.footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ---------- CHECKOUT PAGE ---------- */
+
+.checkout-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Form layout */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formgroup,
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formgroup label,
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+
+}
+
+.formcontrol,
+.form-control {
+
+    height: 44px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formcontrol:focus,
+.form-control:focus {
+    outline: none;
+    border-color: #ff7200;
+    box-shadow: 0 0 0 2px rgba(255, 114, 0, 0.15);
+}
+
+/* Total field */
+#payment-total {
+    background: #f6f6f6;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px 12px;
+
+}
+
+/* Checkbox styling */
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+    width: 88%;
+    margin: 0 auto 6px;
+    padding-left: 7px;
+}
+
+.form-check input {
+    margin-top: 3px;
+    transform: scale(1.05);
+}
+
+/* Checkout button */
+.checkout-btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background: #ff7200;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 25px auto 0;
+    display: block;
+}
+
+.checkout-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+    .checkout-container {
+        margin: 30px 15px;
+        padding: 25px 20px;
+    }
+}
+
+
+/* Shared alignment width */
+.checkout-field {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.formgroup label,
+.form-group label,
+.formcontrol,
+.form-control,
+.checkout-btn,
+.total-row {
+    width: 88%;
+    margin: 0 auto;
+}
+
+/* Total row styling */
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 12px 14px;
+    background: #f7f7f7;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.total-row label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+#payment-total {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 800;
+    color: #000;
+    text-align: right;
+    padding: 0;
+    width: auto;
+}

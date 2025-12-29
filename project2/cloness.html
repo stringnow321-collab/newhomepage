@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>webpage Design</title>
+    <link rel="stylesheet" href="clonemainpage.css">
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <a href="newhomepage.html">
+                <img src="images/logo.png" class="logo-img">
+            </a>
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- NAV MENU BAR -->
+    <nav class="navbar">
+
+        <ul id="MenuItems">
+            <li class="dropdown">
+                <a href="#">CLONES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cloness.html"> Clones</a></li>
+                    <li><a href="exoticclones.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">TEENS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Teens</a></li>
+                    <li><a href="comingsoonpages.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">SEEDS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Seeds</a></li>
+                    <li><a href="comingsoonpages.html">Exotic Seeds</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">GROW SUPPLY</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Grow Supply</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">MERCH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <section class="main-content">
+        <div class="products-section">
+            <div class="products-header">
+                <h2 class="title">All CLONES</h2>
+
+
+                <div class="sort-wrap">
+                    <select>
+                        <option>Default Sorting</option>
+                        <option>Sort by Price</option>
+                        <option>Sort by popularity</option>
+                        <option>Sort by rating</option>
+                        <option>Sort by sale</option>
+                    </select>
+                </div>
+                <div id="productList" class="productList">
+                    <!-- keep all your <div class="col-4"> items exactly as they are -->
+                    <!-- just remove all row wrappers -->
+                    <!-- example: -->
+                    <div class="col-4">
+                        <a href="permgas.html" class="product-link">
+                            <img src="images/PG1.webp">
+                            <h4>Permanent Gas</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+        id: 'permgas',
+        name: 'Permanent Gas',
+        price: 25,
+        image: 'images/PG1.webp'
+      })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="candypave.html" class="product-link">
+                            <img src="images/candypave1.jpeg">
+                            <h4>Candy Pave</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'candypave',
+                        name: 'Candy Pave',
+                         price: 25,
+                         image: 'images/candypave1.wjpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="kushmints.html" class="product-link">
+                            <img src="images/KUSHMINTS1.jpeg">
+                            <h4>Kush Mintz</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'Kushmintz',
+                        name: 'Kush Mints',
+                         price: 25,
+                         image: 'images/kushmints1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="cheetahpiss.html" class="product-link">
+                            <img src="images/cheetahpiss1.webp">
+                            <h4>Cheetah Piss</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'cheetahpiss',
+                        name: 'Cheetah Piss',
+                         price: 25,
+                         image: 'images/cheetahpiss1.webp'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="watermelongelato.html" class="product-link">
+                            <img src="images/watermelongelato1.jpeg">
+                            <h4>Watermelon Gelato</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'watermelongelato',
+                        name: 'Watermelon Gelato',
+                         price: 25,
+                         image: 'images/watermelongelato1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="blunicorn.html" class="product-link">
+                            <img src="images/Blunicorn1.jpeg">
+                            <h4>Blue Unicorn</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'blueunicorn',
+                        name: 'Blue Unicorn',
+                         price: 25,
+                         image: 'images/blueunicorn1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="glitterbomb.html" class="product-link">
+                            <img src="images/glitterbomb1.png">
+                            <h4>Glitter Bomb</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'GlitterBomb',
+                        name: 'Glitter Bomb',
+                         price: 25,
+                         image: 'images/glitterbomb1.png'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="motorbreath.html" class="product-link">
+                            <img src="images/motorbreath1.webp">
+                            <h4>Motor Breath</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'motorbreath',
+                        name: 'Motor Breath',
+                         price: 25,
+                         image: 'images/motorbreath1.webp'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="macv2.html" class="product-link">
+                            <img src="images/MacV2.jpeg">
+                            <h4>Mac V2 </h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'MacV2',
+                        name: 'Mac V2',
+                         price: 25,
+                         image: 'images/MacV2.wjpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="bluezoap.html" class="product-link">
+                            <img src="images/bluez1.webp">
+                            <h4>Blue Zoap</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'bluezoap',
+                        name: 'Blue Zoap',
+                         price: 25,
+                         image: 'images/bluez1.webp'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="ringoffire.html" class="product-link">
+                            <img src="images/rof1.jpeg">
+                            <h4>Ring Of Fire</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'ringoffire',
+                        name: 'Ring of Fire',
+                         price: 25,
+                         image: 'images/rof1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="WBRUNTZ.html" class="product-link">
+                            <img src="images/wcrunt1.jpeg">
+                            <h4>Wild Berry Runtz</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'WBRUNTZ',
+                        name: 'Wild Berry Runtz',
+                         price: 25,
+                         image: 'images/wcrunt1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="redblowpop.html" class="product-link">
+                            <img src="images/rbp1.jpeg">
+                            <h4>Red Blow Pop</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'RedBlowPop',
+                        name: 'Red Blow Pop',
+                         price: 25,
+                         image: 'images/rbp1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="superskunk.html" class="product-link">
+                            <img src="images/sskunk1.webp">
+                            <h4>Super Skunk</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'superskunk',
+                        name: 'Super Skunk',
+                         price: 25,
+                         image: 'images/sskunk1.webp'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="bluegraoesicle.html" class="product-link">
+                            <img src="images/produnavilable.jpg">
+                            <h4>Blue Grapeiscle</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'bluegrapesicle',
+                        name: 'Blue Grapeiscle',
+                         price: 25,
+                         image: 'images/produnavilable.jpg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="guavagelato.html" class="product-link">
+                            <img src="images/ggel1.jpeg">
+                            <h4>Guava Gelato</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'GuavaGelato',
+                        name: 'Guava Gelato',
+                         price: 25,
+                         image: 'images/ggel1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="tropicanadream.html" class="product-link">
+                            <img src="images/produnavilable.jpg">
+                            <h4>Tropicana Dream</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'tropicanadream',
+                        name: 'Tropicana Dream',
+                         price: 25,
+                         image: 'images/produnavilable.jpg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="blueberryfrostbite.html" class="product-link">
+                            <img src="images/BFB1.jpeg">
+                            <h4>Blueberry Frostbite</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'BlueberryFrostbite',
+                        name: 'Blueberry Frostbite',
+                         price: 25,
+                         image: 'images/BFB1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="oreblizz.html" class="product-link">
+                            <img src="images/OB1.jpeg">
+                            <h4>Oreo Blizzard</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'OBLizz',
+                        name: 'Oreo BLizzard',
+                         price: 25,
+                         image: 'images/OB1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="ajsour.html" class="product-link">
+                            <img src="images/aj1.jpeg">
+                            <h4>Aj Sour Dee</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+                         id: 'AJSour',
+                        name: 'AJ Sour Dee',
+                         price: 25,
+                         image: 'images/aj1.jpeg'
+                                  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="mokeybread.html" class="product-link">
+                            <img src="images/monkeybread1.webp">
+                            <h4>Monkey Bread</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'monkeybread',
+    name: 'Monkey Bread',
+    price: 25,
+    image: 'images/monkeybread1.webp'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="1987.html" class="product-link">
+                            <img src="images/19871.jpeg">
+                            <h4>1987</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: '1987',
+    name: '1987',
+    price: 25,
+    image: 'images/19871.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="dntesinferno.html" class="product-link">
+                            <img src="images/danteinf1.jpeg">
+                            <h4>Dante's Inferno</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart
+  
+  ({
+    id: 'dantesinferno',
+    name:'Dantes Inferno',
+    price: 25,
+     image: 'images/danteinf1.jpeg'
+     })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="redrager.html" class="product-link">
+                            <img src="images/redrager.png">
+                            <h4>Red Rager</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'redrager',
+    name: 'Red Rager',
+    price: 25,
+    image: 'images/redrager.png'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="ladypink.html" class="product-link">
+                            <img src="images/Pinklady1.jpeg">
+                            <h4>Lady Pink</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'ladypink',
+    name: 'Lady Pink',
+    price: 25,
+    image: 'images/Pinklady1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="cherryzelato.html" class="product-link">
+                            <img src="images/cherryz1.jpeg">
+                            <h4>Cherry Zelato</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'CherryZelato',
+    name: 'Cherry Zelato',
+    price: 25,
+    image: 'images/cherryz1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="superboof.html" class="product-link">
+                            <img src="images/superboof1.jpeg">
+                            <h4>Super Boof</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'superboof',
+    name: 'Super Boof',
+    price: 25,
+    image: 'images/Super Boof.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="platog.html" class="product-link">
+                            <img src="images/platog.webp">
+                            <h4>Plat OG</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Plat OG',
+    name: 'Platinum OG',
+    price: 25,
+    image: 'images/platog.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="orangecream.html" class="product-link">
+                            <img src="images/OC1.png">
+                            <h4>Orange Cream</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'OrangeCream',
+    name: 'Orange Cream',
+    price: 25,
+    image: 'images/OC1.png'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="mangomintality.html" class="product-link">
+                            <img src="images/manmin1.jpeg">
+                            <h4>Mango Mintality</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'MangoMint',
+    name: 'mango Mintality',
+    price: 25,
+    image: 'images/manmin1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="firstclas.html" class="product-link">
+                            <img src="images/FIRCLASSFUNK1.jpeg">
+                            <h4>First Class Funk</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'FCfunk',
+    name: 'First Class Funk',
+    price: 25,
+    image: 'images/FIRCLASSFUNK1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="capboog.html" class="product-link">
+                            <img src="images/CAPBUBBOOG1.webp">
+                            <h4>Cap Bubblegum Boogie</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'capboog',
+    name: 'Cap Bubblegum Boogie',
+    price: 25,
+    image: 'images/CAPBUBBOOG1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="ghostog.html" class="product-link">
+                            <img src="images/ghostog.webp">
+                            <h4>Ghost OG</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'GhostOG',
+    name: 'Ghost OG',
+    price: 25,
+    image: 'images/ghostog.webp'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="mkultra.html" class="product-link">
+                            <img src="images/mkultra1.jpeg">
+                            <h4>MK Ultra</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'MkUltra',
+    name: 'MK Ultra',
+    price: 25,
+    image: 'images/mkultra1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="sugarcane.html" class="product-link">
+                            <img src="images/sugarcane.png">
+                            <h4>Sugar Cane</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'sugarcane',
+    name: 'sugarcane',
+    price: 25,
+    image: 'images/sugarcane.png'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="lemondiseael.html" class="product-link">
+                            <img src="images/lemondesial1.webp">
+                            <h4>Lemon Diesel</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Lemondiesel',
+    name: 'LemonDiesel',
+    price: 25,
+    image: 'images/lemondesial1.webp'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+
+                    <div class="col-4">
+                        <a href="watermelonskittlez.html" class="product-link">
+                            <img src="images/watsk1.webp">
+                            <h4>Watermelon Skittlez</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'WatSK',
+    name: 'Watermelon Skittlez',
+    price: 25,
+    image: 'images/watsk1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="bluedream.html" class="product-link">
+                            <img src="images/BlueDream.jpeg">
+                            <h4>Blue Dream</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Blue Dream',
+    name: 'Blue Dream',
+    price: 25,
+    image: 'images/BlueDream.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+
+
+
+
+                    <div class="col-4">
+                        <a href="jungle grape.html" class="product-link">
+                            <img src="images/JUNGLEGRAPS3.png">
+                            <h4>Jungle Grapes</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'JungleGrape',
+    name: 'Jungle grape',
+    price: 25,
+    image: 'images/JUNGLEGRAPS3.png'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="platinumpebbles.html" class="product-link">
+                            <img src="images/platinumpebbles.jpeg">
+                            <h4>Platinum Pebbles</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'platinumpebbles',
+    name: 'Platinum Pebbles',
+    price: 25,
+    image: 'images/platinumpebbles.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="lemoncherrygelato.html" class="product-link">
+                            <img src="images/LemonCherryGelato.jpeg">
+                            <h4>Lemon Cherry Gelato</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'lemoncherrygelato',
+    name: 'lemoncherrygelato',
+    price: 25,
+    image: 'images/lemoncherrygelato.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="skywalkerog.html" class="product-link">
+                            <img src="images/skywalker1.jpeg">
+                            <h4>Sky Walker OG</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Sky Walker OG',
+    name: 'Sky Walker OG',
+    price: 25,
+    image: 'images/skywalker1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="whitetruffle.html" class="product-link">
+                            <img src="images/whitetruffle1.webp">
+                            <h4>White Truffle</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'White Truffle',
+    name: 'White Truffle',
+    price: 25,
+    image: 'images/whitetruffle1.webp'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="blueberrymuff.html" class="product-link">
+                            <img src="images/bbm1.jpeg">
+                            <h4>Blueberry Muffin</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'bbm',
+    name: 'Blueberry Muffin',
+    price: 25,
+    image: 'images/bbm1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="rainbowbeltz.html" class="product-link">
+                            <img src="images/rainbowbelt1.webp">
+                            <h4>Rainbow Beltz</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Rainbbelt',
+    name: 'rainbowbelt1',
+    price: 25,
+    image: 'images/rainbowbelt1.webp'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="platinumsour.html" class="product-link">
+                            <img src="images/platsour.webp">
+                            <h4>platsour</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'platsour',
+    name: 'platsour',
+    price: 25,
+    image: 'images/platsour.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="purplemac.html" class="product-link">
+                            <img src="images/PURPLEMAC5.jpeg">
+                            <h4>Purple Mac</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'PurpleMac',
+    name: 'Purple Mac',
+    price: 25,
+    image: 'images/PURPLEMAC5.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="islandpunch.html" class="product-link">
+                            <img src="images/ipun1.jpeg">
+                            <h4>Island Punch</h4>
+                            <div class="rating"></div>
+                            <div class="stars" data-rating="4.5"></div>
+                            <p>$25.00</p>
+                        </a>
+
+                        <button class="add-btn" onclick="addToCart({
+    id: 'Island Punch',
+    name: 'Island Punch',
+    price: 25,
+    image: 'images/ipun1.jpeg'
+  })">
+                            Add to Cart
+                        </button>
+                    </div>
+
+
+
+
+                    <!-- repeat for ALL products you have -->
+                </div>
+            </div>
+            <div id="pagination" class="page-btn">
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <!----------FOOTER----------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="app-logo">
+                    <!-- Google Play -->
+                    <a href="#" class="store-link google-play" title="Coming soon on Google Play">
+                        <img src="images/gogplay.webp" alt="Get it on Google Play">
+                    </a>
+
+                    <!-- Apple App Store -->
+                    <a href="#" class="store-link app-store" title="Coming soon on the App Store">
+                        <img src="images/aplapp.png" alt="Download on the App Store">
+                    </a>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> coupons</li>
+                        <li> BLog Post</li>
+                        <li> Return Policy</li>
+                        <li> Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> Facebook</li>
+                        <li> Twitter</li>
+                        <li> logo-instagram</li>
+                        <li> gmail</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="Clone Cartel Holding Co">Clone Cartel Holding Co</p>
+
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script>
+        const products = [...document.querySelectorAll('#productList .col-4')];
+        const itemsPerPage = 12; // CHANGE THIS NUMBER (example: 8 products per page)
+        let currentPage = 1;
+
+        function showPage(page) {
+            currentPage = page;
+
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            products.forEach((item, index) => {
+                item.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+
+            renderPagination();
+        }
+
+        function renderPagination() {
+            const pageCount = Math.ceil(products.length / itemsPerPage);
+            const pagination = document.getElementById('pagination');
+
+            pagination.innerHTML = '';
+
+            for (let i = 1; i <= pageCount; i++) {
+                const btn = document.createElement('span');
+                btn.textContent = i;
+                btn.style.cursor = "pointer";
+
+                if (i === currentPage) {
+                    btn.style.background = "#ff523b";
+                    btn.style.color = "#fff";
+                }
+
+                btn.addEventListener('click', () => showPage(i));
+                pagination.appendChild(btn);
+            }
+        }
+
+        showPage(1);
+    </script>
+
+    <script src="cart.js"></script>
+
+
+
+
+    <script src="cart.js"></script>
+
+    <script>
+        document.querySelectorAll('.stars').forEach(star => {
+            star.style.setProperty('--rating', star.dataset.rating);
+        });
+    </script>
+</body>
+
+</html>

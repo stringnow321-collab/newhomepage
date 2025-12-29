@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>CLONES - CLONE CARTEL</title>
+    <link rel="stylesheet" href="exotcs.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="images/logo.png" class="logo-img">
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- NAV MENU BAR -->
+    <nav class="navbar">
+
+        <ul id="MenuItems">
+            <li class="dropdown">
+                <a href="#">CLONES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cloness.html"> Clones</a></li>
+                    <li><a href="exoticclones.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">TEENS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Teens</a></li>
+                    <li><a href="#">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">SEEDS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Seeds</a></li>
+                    <li><a href="exoticseeds.html">Exotic Seeds</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">GROW SUPPLY</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Grow Supplies</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">MERCH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h2 class="title">Seeds</h2>
+
+    <div class="products-section">
+        <div class="products-header">
+            <div id="productList" class="productList">
+
+                <div class="col-4">
+                    <img src="images/pm.jpg" width="40px">
+                    <h4>Permanent Gas Clone</h4>
+                    <div class="rating"></div>
+                    <div class="stars" data-rating="4.5"></div>
+                    <p>$30.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="images/pm.jpg" width="40px">
+                    <h4>Permanent Gas Clone</h4>
+                    <div class="rating"></div>
+                    <div class="stars" data-rating="4.5"></div>
+                    <p>$25.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="images/pm.jpg" width="40px">
+                    <h4>Permanent Gas Clone</h4>
+                    <div class="rating"></div>
+                    <div class="stars" data-rating="4.5"></div>
+                    <p>$25.00</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="images/clones cartel header pic Small.jpg" width="40px">
+                    <h4>Permanent Gas Clone</h4>
+                    <div class="rating"></div>
+                    <div class="stars" data-rating="4.5"></div>
+                    <p>$25.00</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="app-logo">
+                    <!-- Google Play -->
+                    <a href="#" class="store-link google-play" title="Coming soon on Google Play">
+                        <img src="images/gogplay.webp" alt="Get it on Google Play">
+                    </a>
+
+                    <!-- Apple App Store -->
+                    <a href="#" class="store-link app-store" title="Coming soon on the App Store">
+                        <img src="images/aplapp.png" alt="Download on the App Store">
+                    </a>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> coupons</li>
+                        <li> BLog Post</li>
+                        <li> Return Policy</li>
+                        <li> Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> Facebook</li>
+                        <li> Twitter</li>
+                        <li> logo-instagram</li>
+                        <li> gmail</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="Clone Cartel Holding Co">Clone Cartel Holding Co</p>
+
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+        document.querySelectorAll('.stars').forEach(star => {
+            star.style.setProperty('--rating', star.dataset.rating);
+        });
+    </script>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

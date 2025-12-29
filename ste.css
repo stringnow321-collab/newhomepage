@@ -1,0 +1,99 @@
+body {
+    background-color: gainsboro;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+}
+
+header {
+    background-color: blue;
+    height: 400px;
+    width: 1024px;
+    image-rendering: pixelated;
+}
+
+nav {
+    background-color: red;
+    height: 400px;
+    width: 1024px
+}
+
+main {
+    background-color: orange;
+    height: 400px;
+    width: 1024px;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 240px;
+    padding-right: 240px;
+}
+
+footer {
+    background-color: greenyellow;
+    height: 400px;
+    width: 1024px;
+}
+
+h1 {
+    font-size: 84px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+background-image: url(images/Screen\ Shot\ 2025-11-18\ at\ 3.54.43\ PM\ Small.png);
+
+
+
+
+
+
+
+main {
+    height: 400px;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+
+    padding-bottom: 150px;
+
+    padding-top: 40px;
+    margin-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+
+
+    width: 200px;
+    height: 100px;
+    border: 2px solid #ff3d0036;
+    border-radius: 5px;
+    box-shadow: 4px 7px 7px 0px #00000042;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    image-orientation: inherit;

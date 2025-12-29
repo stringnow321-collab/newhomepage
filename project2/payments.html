@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Clone Cartel</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="images/logo.png" class="logo-img">
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- NAV MENU BAR -->
+    <nav class="navbar">
+
+        <ul id="MenuItems">
+            <li class="dropdown">
+                <a href="#">CLONES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cloness.html"> Clones</a></li>
+                    <li><a href="exoticclones.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">TEENS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Teens</a></li>
+                    <li><a href="comingsoonpages.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">SEEDS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="seeds.html">Seeds</a></li>
+                    <li><a href="exoticseeds.html">Exotic Seeds</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">GROW SUPPLY</a>
+                <ul class="dropdown-menu">
+                    <li><a href="growsupply.html">Grow Supply</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">MERCH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="merch.html">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- PAYMENT CONTAINER -->
+    <div class="cart-page">
+
+        <h2 style="margin-bottom:30px;">Payment Details</h2>
+
+        <form class="payment-form" id="checkout-form">
+
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>phone</label>
+            <input type="text" id="phone" required>
+
+            <label>Address</label>
+            <input type="text" id="address" required>
+
+            <label>Zip </label>
+            <input type="text" id="zip" required>
+
+
+
+            <label>Total</label>
+            <input type="text" id="payment-total" readonly>
+
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+
+            <div class="payment-row">
+                <div>
+                    <label>Expiry</label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+                <div>
+                    <label>CVC</label>
+                    <input type="text" placeholder="123" required>
+                </div>
+            </div>
+
+            <button type="submit" class="checkout-btn">
+                Pay Now
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p style="text-align:center;">Clone Cartel Holding Co</p>
+    </div>
+
+    <script>
+        function getCart() {
+            return JSON.parse(localStorage.getItem("cart")) || [];
+        }
+
+        function updateCartIcon() {
+            const cart = getCart();
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById("cart-count").textContent = count;
+        }
+
+        updateCartIcon();
+    </script>
+
+    <script>
+
+
+        function calculateCartTotal() {
+            const cart = getCart();
+
+            const BULK_QTY = 10;
+            const BULK_PRICE = 20;
+
+            let totalQty = 0;
+            let subtotal = 0;
+
+            cart.forEach(item => totalQty += item.qty);
+
+            cart.forEach(item => {
+                const price = totalQty >= BULK_QTY ? BULK_PRICE : item.price;
+                subtotal += price * item.qty;
+            });
+
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            return total.toFixed(2);
+        }
+
+        // Display total in payment form
+        document.addEventListener("DOMContentLoaded", () => {
+            const total = calculateCartTotal();
+            const totalInput = document.getElementById("payment-total");
+            if (totalInput) {
+                totalInput.value = `$${total}`;
+            }
+        });
+    </script>
+
+
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwnP-46-pBQsygzzKb3hHAsuaVJ4VJesEqHTbEX2PlKpz5tuZYfoeOepzK_w4nmxXgI/exec";
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem("cart")) || [];
+        }
+
+        document.getElementById("checkout-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const cart = getCart();
+            const total = calculateCartTotal();
+
+            const orderData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                address: document.getElementById("address").value,
+                zip: document.getElementById("zip").value,
+                cart: cart,
+                total: total
+            };
+
+            try {
+                const response = await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                const result = await response.json();
+
+                if (result.status === "success") {
+                    alert("Order placed successfully!");
+                    localStorage.removeItem("cart");
+                    window.location.href = "thankyou.html";
+                } else {
+                    alert("Server error");
+                    console.error(result);
+                }
+
+            } catch (err) {
+                alert("Error submitting order");
+                console.error(err);
+            }
+        });
+    </script>
+
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

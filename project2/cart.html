@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>CLONES - CLONE CARTEL| webpage design</title>
+    <link rel="stylesheet" href="finalcarts.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="images/logo.png" class="logo-img">
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- NAV MENU BAR -->
+    <nav class="navbar">
+
+
+        <ul id="MenuItems">
+            <li class="dropdown">
+                <a href="#">CLONES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cloness.html"> Clones</a></li>
+                    <li><a href="clones.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Teens</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Teens</a></li>
+                    <li><a href="#">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Grow Supply</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Grow Supply</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Merch</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="small-container cart-page">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="cart-subtotal">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="cart-tax">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="cart-total">$0.00</td>
+                </tr>
+            </table>
+
+            <a href="payments2.html" class="checkout-btn">Checkout</a>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Downlowd our app</h3>
+                    <p> Download app for android and ios mobile app</p>
+                    <div class="app-logo">
+                        <img src="images/icons.png">
+
+                    </div>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> coupons</li>
+                        <li> BLog Post</li>
+                        <li> Return Policy</li>
+                        <li> Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>useful links</h3>
+                    <ul>
+                        <li> Facebook</li>
+                        <li> Twitter</li>
+                        <li> logo-instagram</li>
+                        <li> gmail</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="Clone Cartel Holding Co">Clone Cartel Holding Co</p>
+
+        </div>
+    </div>
+
+
+    <script>
+        const MenuItems = document.getElementById("MenuItems");
+
+        function menutoggle() {
+            MenuItems.classList.toggle("active");
+        }
+    </script>
+
+
+    <script>
+        let slides = document.querySelectorAll(".slideshow .slide");
+        let current = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        // Auto-slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Button events
+        document.querySelector(".next").onclick = nextSlide;
+        document.querySelector(".prev").onclick = prevSlide;
+
+        // Initialize
+        showSlide(current);
+    </script>
+
+
+
+
+    <script>
+        function getCart() {
+            return JSON.parse(localStorage.getItem("cart")) || [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        const BULK_QTY = 10;
+        const BULK_PRICE = 20;
+
+        function renderCart() {
+            const cart = getCart();
+            const tbody = document.getElementById("cart-items");
+            tbody.innerHTML = "";
+
+            let subtotal = 0;
+            let totalQty = 0;
+
+            // Count total quantity
+            cart.forEach(item => {
+                totalQty += item.qty;
+            });
+
+            cart.forEach((item, index) => {
+                // Apply bulk pricing at 10+
+                const price =
+                    totalQty >= BULK_QTY
+                        ? BULK_PRICE
+                        : item.price;
+
+                const rowTotal = price * item.qty;
+                subtotal += rowTotal;
+
+                tbody.innerHTML += `
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="${item.image}">
+                    <div>
+                        <p>${item.name}</p>
+                        <small>
+                            Price: $${price.toFixed(2)}
+                            ${totalQty >= BULK_QTY
+                        ? "<br><span style='color:green;font-weight:bold'>Bulk price applied</span>"
+                        : ""}
+                        </small><br>
+                        <a href="#" onclick="removeItem(${index})">remove</a>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" min="1" value="${item.qty}"
+                    onchange="updateQty(${index}, this.value)">
+            </td>
+            <td>$${rowTotal.toFixed(2)}</td>
+        </tr>`;
+            });
+
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            document.getElementById("cart-subtotal").textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById("cart-tax").textContent = `$${tax.toFixed(2)}`;
+            document.getElementById("cart-total").textContent = `$${total.toFixed(2)}`;
+            document.getElementById("cart-count").textContent = totalQty;
+        }
+
+
+        function updateQty(index, qty) {
+            const cart = getCart();
+            cart[index].qty = parseInt(qty);
+            saveCart(cart);
+            renderCart();
+        }
+
+        function removeItem(index) {
+            const cart = getCart();
+            cart.splice(index, 1);
+            saveCart(cart);
+            renderCart();
+        }
+
+        renderCart();
+    </script>
+
+    <script src="cart.js"></script>
+
+
+</body>
+
+</html>

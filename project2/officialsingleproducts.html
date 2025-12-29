@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLONES - CLONE CARTEL | Webpage Design</title>
+    <link rel="stylesheet" href="clonesstyle.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="images/logo.png" class="logo-img">
+        </div>
+
+        <div class="top-right">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="cart.html" class="cart-icon">
+
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- NAV MENU BAR -->
+    <nav class="navbar">
+
+        <ul id="MenuItems">
+            <li class="dropdown">
+                <a href="#">CLONES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cloness.html"> Clones</a></li>
+                    <li><a href="exoticclones.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">TEENS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="comingsoonpages.html">Teens</a></li>
+                    <li><a href="comingsoonpages.html">Exotics</a></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">SEEDS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="seeds.html">Seeds</a></li>
+                    <li><a href="exoticseeds.html">Exotic Seeds</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">GROW SUPPLY</a>
+                <ul class="dropdown-menu">
+                    <li><a href="growsupply.html">Grow Supply</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">MERCH</a>
+                <ul class="dropdown-menu">
+                    <li><a href="merch.html">Merchandise</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- PAGE CONTENT -->
+    <div class="small-container single-product">
+        <div class="row">
+
+            <!-- LEFT COLUMN : IMAGE GALLERY -->
+            <div class="col-2">
+                <div class="image-gallery">
+                    <img src="images/CheetahPiss.png" id="productimg" class="main-img">
+
+                    <div class="small-img-row">
+                        <div class="small-img-col">
+                            <img src="images/CheetahPiss.png" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/CheetahPiss.png" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/CheetahPiss.png" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="images/CheetahPiss.png" class="small-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN : PRODUCT DETAILS -->
+            <div class="col-2 product-details">
+                <p>Home / Clones</p>
+
+                <h1 id="product-name">Permanent Gas</h1>
+                <h4 id="product-price">$30.00</h4>
+
+                <select id="product-qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <!-- NEW CLEAN ADD TO CART BUTTON -->
+                <a href="#" class="btn add-to-cart-btn">Add To Cart</a>
+
+                <h3>Product Details</h3>
+                <p>
+                    Permanent Gas is a sativa-dominant hybrid marijuana strain resulting from a genetic cross
+                    between Permanent Marker and Sour Diesel. It provides creative, energetic, euphoric effects with
+                    strong diesel aroma. THC levels average 27%.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Download for Android and iOS</p>
+                    <div class="app-logo">
+                        <img src="images/Screen Shot 2025-11-28 at 8.44.07 PM.png">
+                        <img src="images/Screen Shot 2025-11-28 at 8.44.07 PM.png">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <h3>About Us</h3>
+                    <p>Download app for android and ios mobile app</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Affiliate Program</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Social</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Email</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+            <p class="Clone Cartel Holding Co">Clone Cartel Holding Co</p>
+        </div>
+    </div>
+
+
+    <!-- MENU TOGGLE SCRIPT -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

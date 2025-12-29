@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clone Cartel – Product Page</title>
+    <link rel="stylesheet" href="clonesstyle.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- NAVBAR -->
+        <div class="top-bar">
+            <div class="top-left">
+                <img src="images/logo.png" class="logo-img">
+            </div>
+
+            <div class="top-right">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn">Search</button>
+                <a href="cart.html" class="cart-icon">
+
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- NAV MENU BAR -->
+        <nav class="navbar">
+
+            <ul id="MenuItems">
+                <li class="dropdown">
+                    <a href="#">CLONES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cloness.html"> Clones</a></li>
+                        <li><a href="exoticclones.html">Exotics</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">TEENS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="comingsoonpages.html">Teens</a></li>
+                        <li><a href="comingsoonpages.html">Exotics</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">SEEDS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seeds.html">Seeds</a></li>
+                        <li><a href="exoticseeds.html">Exotic Seeds</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">GROW SUPPLY</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="growsupply.html">Grow Supply</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">MERCH</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="merch.html">Merchandise</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- PRODUCT SECTION -->
+        <!-- PRODUCT SECTION -->
+        <div class="small-container single-product">
+            <div class="row">
+
+                <!-- LEFT COLUMN (Image Gallery) -->
+                <div class="col-2">
+                    <div class="image-gallery">
+                        <img src="images/CheetahPiss.png" id="productimg" class="main-img">
+
+                        <div class="small-img-row">
+                            <div class="small-img-col">
+                                <img src="images/CheetahPiss.png" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="images/CheetahPiss.png" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="images/CheetahPiss.png" class="small-img">
+                            </div>
+                            <div class="small-img-col">
+                                <img src="images/CheetahPiss.png" class="small-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (Product Text) -->
+                <div class="col-2 product-details">
+                    <p>Home / Clones</p>
+
+                    <h1 id="product-name">Permanent Gas</h1>
+                    <h4 id="product-price">$30.00</h4>
+
+                    <select id="product-qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                    <button class="nav-btn">Search</button>
+                    <button class="nav-btn">
+
+                        <a href="#" class="btn" id="add-to-cart">Add To Cart</a>
+                    </button>
+                    <h3>Product Details</h3>
+                    <p>
+                        Platinum Pebbles is a cross between FPOG (Fruity Pebbles OG)
+                        and PGCP (Platinum Gorilla Cookie Punch).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="small-container">
+        <h2 class="title">Related Products</h2>
+
+        <div class="row related-products">
+            <div class="col-4">
+                <img src="images/pm.jpg" width="80px">
+                <h4>Permanent Gas Clone</h4>
+                <p>$30.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/pm.jpg" width="80px">
+                <h4>Permanent Gas Clone</h4>
+                <p>$30.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/pm.jpg" width="80px">
+                <h4>Permanent Gas Clone</h4>
+                <p>$30.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/clones cartel header pic Small.jpg" width="80px">
+                <h4>Permanent Gas Clone</h4>
+                <p>$30.00</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var productimg = document.getElementById("productimg");
+        var smallImgs = document.getElementsByClassName("small-img");
+
+        var currentIndex = 0;
+
+        // Array of image sources (you can have different images)
+        var images = [
+            "images/CheetahPiss.png",
+            "images/CheetahPiss2.png",
+            "images/CheetahPiss3.png",
+            "images/CheetahPiss4.png"
+        ];
+
+        // Initialize gallery
+        productimg.src = images[0];
+
+        for (let i = 0; i < smallImgs.length; i++) {
+            smallImgs[i].onclick = function () {
+                productimg.src = images[i];
+                currentIndex = i;
+            }
+        }
+
+        // Optional: automatic slideshow every 3 seconds
+        setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= images.length) currentIndex = 0;
+            productimg.src = images[currentIndex];
+        }, 3000);
+    </script>
+
+    <div class="image-gallery">
+        <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+        <span class="next" onclick="plusSlides(1)">&#10095;</span>
+        ...
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Download app for Android and iOS</p>
+                    <div class="app-logo">
+                        <img src="images/Screen Shot 2025-11-28 at 8.44.07 PM.png">
+                        <img src="images/Screen Shot 2025-11-28 at 8.44.07 PM.png">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <h3>Clone Cartel</h3>
+                    <p>Top-tier genetics and cultivation.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Email</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+            <p class="copyright">Clone Cartel Holding Co</p>
+        </div>
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
