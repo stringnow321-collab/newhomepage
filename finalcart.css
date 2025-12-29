@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(238, 241, 236);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- TOP BAR ---------- */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #222;
+}
+
+.top-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
+    flex: 1;
+    /* pushes footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.search-input {
+    height: 40px;
+    padding: 0 12px;
+}
+
+.cart-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-info img {
+    width: 80px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #000;
+    color: #555;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer h3 {
+    color: #ff523b;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+#cart-count {
+    background: #ff7200;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+.search-btn {
+    height: 40px;
+    padding: 0 16px;
+    background: #ff7200;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ---------- PAYMENT ---------- */
+.payment-container {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.payment-container h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.stripe {
+    background: #635bff;
+    color: #fff;
+    border-color: #635bff;
+}
+
+.stripe:hover {
+    opacity: 0.9;
+}
+
+.paypal {
+    background: #ffc439;
+    color: #111;
+    border-color: #ffc439;
+}
+
+.paypal:hover {
+    background: #f4b400;
+}
+
+.crypto {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.crypto:hover {
+    background: #222;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+
+
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* allows wrapping on small screens */
+}
+
+/* Footer columns */
+.footer-col-1,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Footer lists */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Footer divider */
+.footer hr {
+    border: none;
+    height: 1px;
+    background: #333;
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* Footer bottom text */
+.footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.app-logo {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.app-logo img {
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.app-logo img:hover {
+    transform: scale(1.05);
+}
