@@ -219,10 +219,18 @@
                     return;
                 }
 
-                if (data.result === "success") {
-                    // Redirect immediately
-                    window.location.href = "finalcheckoutpage.html";
-                }
+               if (data.result === "success") {
+
+    // ✅ Clear cart
+    localStorage.removeItem("cart");
+
+    // ✅ Update cart icon (optional but clean)
+    document.getElementById("cart-count").textContent = "0";
+
+    // ✅ Redirect
+    window.location.href = "finalcheckoutpage.html";
+}
+
                 else {
                     swal("Error", "Failed to submit data: " + data.error, "error");
                 }
