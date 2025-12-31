@@ -1195,3 +1195,26 @@ th:last-child {
     color: #2c2b2a;
     font-weight: 600;
 }  
+
+
+/* ===== STOP HORIZONTAL SCROLL ===== */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar,
+.small-container,
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
