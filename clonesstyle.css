@@ -174,5 +174,42 @@ body {
   }
 
   .single-product .search-input,
-  .single-product .search-
+  .single-product .search-btn {
+    height: 32px;
+    font-size: 14px;
+  }
 
+  .single-product .menu-icon {
+    display: none;
+  }
+
+  .single-product #MenuItems {
+    display: none;
+  }
+
+  /* PRODUCT LAYOUT */
+  .single-product .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-img {
+    max-height: 320px;
+  }
+
+  .small-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .product-details h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+
+
+
+
+  
