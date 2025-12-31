@@ -60,7 +60,7 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     height: 70px;
-    max-height: 0;
+    max-height: none;
 }
 
 
@@ -284,11 +284,27 @@ ul {
     }
 }
 
-
+/* Desktop default */
 .menu-icon {
-    display: block;
-    cursor: pointer;
+    display: none;
+    
 }
+
+/* Mobile only */
+@media (max-width: 800px) {
+    .menu-icon {
+        display: block;
+    }
+     .menu {
+        max-height: 0;
+    }
+
+    .menu.active {
+        max-height: 300px;
+    }
+}
+}
+
 
 
 @media only screen and (max-width:800px) {
@@ -1230,7 +1246,7 @@ img {
 /* ================= SINGLE PRODUCT MOBILE NAVBAR ================= */
 @media (max-width: 800px) {
 
-  .single-product-page .navbar {
+  .small-container single-product .navbar {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
@@ -1241,47 +1257,66 @@ img {
   }
 
   /* Smaller logo */
-  .single-product-page .navbar .logo img {
+  .single-product .navbar .logo img {
     width: 90px;
     height: auto;
   }
 
   /* Inline smaller search bar */
-  .single-product-page .navbar .search-bar {
+  .single-product .navbar .search-bar {
     grid-column: 2;
     grid-row: 1;
     width: 100%;
   }
 
-  .single-product-page .navbar .search-input {
+  .single-product .navbar .search-input {
     height: 32px;
     font-size: 14px;
     padding: 0 8px;
   }
 
-  .small-container .single-product .navbar .search-btn {
+  .single-product .navbar .search-btn {
     height: 32px;
     font-size: 14px;
     padding: 0 10px;
   }
 
   /* Cart icon right */
-  .small-container .single-product .navbar .cart-dropdown,
-  .small-container .single-product .navbar .cart-icon {
+ .single-product .navbar .cart-dropdown,
+.single-product .navbar .cart-icon {
     grid-column: 3;
     justify-self: end;
     font-size: 18px;
   }
 
   /* Hide menu icon if not needed */
-  .small-container .single-product .menu-icon {
+.single-product .menu-icon {
     display: none;
   }
 
   /* Hide dropdown menu */
-  .small-container .single-product #MenuItems {
-    display: none !important;
+  .single-product #MenuItems {
+    display: none ;
   }
+
+    .menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .menu.active {
+        max-height: 300px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .single-product #MenuItems {
+        display: none;
+    }
+
 }
 
 
