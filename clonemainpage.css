@@ -592,3 +592,25 @@ body {
     height: 1px;
     margin: 20px 0;
 }
+
+
+/* ===== STOP HORIZONTAL SCROLL ===== */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.navbar,
+.small-container,
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
