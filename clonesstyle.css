@@ -1373,8 +1373,8 @@ img {
   }
 
   /* ---------- ADD TO CART (FULL IMAGE WIDTH) ---------- */
-  .single-product .add-to-cart-btn,
-  .single-product .btn {
+  .single-product-page .add-to-cart-btn,
+  .single-product-page.btn {
     width: 100%;
     max-width: 100%;
     padding: 14px;
@@ -1437,7 +1437,7 @@ img {
     width: 100%;
   }
 
-  .single-product-page .search-input {
+  .single-product.search-input {
     flex: 1;
     height: 44px;
     border-radius: 6px 0 0 6px;
