@@ -28,7 +28,7 @@
         </div>
     </div>
 
-<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+
 
 
         <ul id="MenuItems">
@@ -1045,12 +1045,22 @@
         </div>
     </div>
 
-<script>
-       function menutoggle() {
-  document.getElementById("MenuItems").classList.toggle("active");
-}
 
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
     </script>
+
 
     <script>
         const products = [...document.querySelectorAll('#productList .col-4')];
