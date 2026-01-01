@@ -560,3 +560,15 @@ body {
     overflow: hidden;
     white-space: nowrap;
 }
+
+
+
+
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 60px;
+}
