@@ -319,6 +319,14 @@ body {
     color: #888;
 }
 
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 60px;
+}
+
 /* ---------------------- RESPONSIVE DESIGN ---------------------- */
 @media (max-width: 900px) {
 
