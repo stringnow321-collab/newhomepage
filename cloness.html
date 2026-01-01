@@ -26,12 +26,7 @@
         </div>
     </div>
 
-    <!-- NAV MENU BAR -->
-    <nav class="navbar">
-<img src="project2/images/menu.svg"
-     class="menu-icon"
-     onclick="toggleMenu()"
-     alt="Menu">
+
 
         <ul id="MenuItems">
             <li class="dropdown">
@@ -1048,10 +1043,19 @@
     </div>
 
 <script>
-function toggleMenu() {
-    document.getElementById("MenuItems").classList.toggle("active");
-}
-</script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
 
     <script>
         const products = [...document.querySelectorAll('#productList .col-4')];
