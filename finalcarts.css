@@ -537,3 +537,22 @@ td input {
     padding: 0;
     width: auto;
 }
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.navbar,
+.small-container,
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
