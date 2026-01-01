@@ -58,19 +58,14 @@ body {
 /* ---------------------- NAVBAR ---------------------- */
 /* ---------------------- FIXED NAVBAR ---------------------- */
 .navbar {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    height: 60px;
-    background: #222;
-    padding: 12px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-
+  width: 100%;
+  background: #d9d9d9; /* grey backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
+
 
 
 .menu-icon {
@@ -82,9 +77,11 @@ body {
 }
 
 #MenuItems {
-    list-style: none;
-    display: flex;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
 }
 
 #MenuItems li {
@@ -93,15 +90,15 @@ body {
 
 #MenuItems>li>a {
     text-decoration: none;
-    color: white;
+    color: #000;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     padding: 8px;
     transition: 0.3s;
 }
 
 #MenuItems>li>a:hover {
-    color: #ff7200;
+    color: ##555;
 }
 
 /* ▼ arrow */
@@ -113,14 +110,14 @@ body {
 /* ---------------------- DROPDOWN MENU ---------------------- */
 .dropdown-menu {
     list-style: none;
-    background: #333;
+    background: #e5e5e5;
     position: absolute;
     top: 100%;
     left: 50%;
     min-width: 160px;
     display: none;
     flex-direction: column;
-    border: 1px solid #444;
+    border: 1px solid #bbb;
     z-index: 1000;
     top: calc(100% + 16px);
     transform: translateX(-50%);
@@ -128,14 +125,14 @@ body {
 
 .dropdown-menu li a {
     padding: 10px 15px;
-    color: white;
+    color: #000;
     text-decoration: none;
     display: block;
     transition: 0.3s;
 }
 
 .dropdown-menu li a:hover {
-    background: #ff7200;
+    background:  #cfcfcf;
     color: #000;
 }
 
@@ -347,6 +344,23 @@ body {
 
 @media (max-width: 800px) {
 
+    .top-bar {
+    padding: 12px 20px;
+  }
+
+  .top-right {
+    margin-left: auto; /* pushes right */
+    gap: 6px;
+  }
+
+  .search-input {
+    width: 140px; /* slightly smaller for mobile */
+  }
+
+  .cart-icon {
+    margin-left: 6px;
+  }
+
     .menu-icon {
         display: block;
     }
@@ -356,14 +370,18 @@ body {
         display: none;
         position: absolute;
         top: 60px;
-        background: #222;
+        background: #d9d9d9;
         width: 100%;
         left: 0;
         flex-direction: column;
         padding: 20px 0;
         gap: 20px;
         border-top: 1px solid #444;
+        text-align: center;
     }
+     #MenuItems li a {
+    color: #000;
+  }
 
     #MenuItems.active {
         display: flex;
