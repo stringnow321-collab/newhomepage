@@ -570,5 +570,17 @@ body {
 }
 
 .app-logo img {
-    width: 60px;
+    width: 30px;
+}
+
+
+.footer hr {
+    border: none;
+    background: #2015c2;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
 }
