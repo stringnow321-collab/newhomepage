@@ -1,4 +1,4 @@
-/* ---------------------- GLOBAL RESET ---------------------- */
+* ---------------------- GLOBAL RESET ---------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -353,7 +353,7 @@ body {
 
 
     #MenuItems {
-        display: flex;
+        display: none;
         position: absolute;
         top: 60px;
         background: #222;
@@ -576,7 +576,6 @@ body {
 
 
 
-
 .app-logo {
     margin-top: 20px;
 }
@@ -613,158 +612,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.cart-dropdown {
-    position: relative;
-}
-
-.cart-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    border: 1px solid #ccc;
-    min-width: 150px;
-    z-index: 100;
-}
-
-.cart-icon:hover {
-    opacity: 0.85;
-}
-
-.cart-icon {
-    color: white;
-    font-size: 18px;
-    position: relative;
-}
-
-#cart-count {
-    background: #ff7200;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 8px;
-    font-size: 12px;
-    margin-left: 5px;
-}
-
-
-
-.navbar .logo {
-    float: none;
-}
-
-.navbar .logo img {
-    width: 150px;
-}
-
-#MenuItems {
-    display: flex;
-    gap: 40px;
-    /* space between menu items */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-#MenuItems>li {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-/* Top links */
-#MenuItems>li>a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    background: #333;
-    min-width: 160px;
-    padding: 0;
-    margin: 0;
-
-    list-style: none;
-
-    border: 1px solid #444;
-    z-index: 10000;
-}
-
-/* Dropdown items styling */
-.dropdown-menu li {
-    margin: 0;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: black;
-    font-weight: normal;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #ff7200;
-}
-
-/* Show dropdown on hover */
-#MenuItems li.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Optional: arrow */
-#MenuItems li.dropdown>a::after {
-    content: " ▼";
-    font-size: 11px;
-    margin-left: 5px;
-}
-
-
-
-
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.search-input {
-    height: 40px;
-    padding: 0 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-}
-
-.search-btn {
-    height: 40px;
-    padding: 0 16px;
-    font-size: 16px;
-    border: none;
-    background: #ff7200;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-
-
-.cart-icon,
-.menu-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
