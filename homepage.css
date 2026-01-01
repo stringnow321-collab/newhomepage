@@ -459,3 +459,25 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 60px;
+}
+
+
+.footer hr {
+    border: none;
+    background: #2015c2;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
