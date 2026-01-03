@@ -1463,7 +1463,7 @@ img {
 /* Back arrow */
 .single-product-page .product-back-arrow {
     position: absolute;
-    top: 700px;   /* inside image */
+    top: 300px;   /* inside image */
     left: 0;
 
     width: 42px;
