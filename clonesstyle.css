@@ -1458,3 +1458,46 @@ img {
 
 
 
+/* ================= SINGLE PRODUCT BACK ARROW ================= */
+.single-product-page .image-gallery {
+    position: relative;
+}
+
+/* Arrow button */
+.single-product-page .product-back-arrow {
+    position: absolute;
+    top: -45px;           /* places it above the image */
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+/* Hover effect (desktop) */
+.single-product-page .product-back-arrow:hover {
+    background: #ff7200;
+    transform: translateX(-3px);
+}
+
+/* Mobile positioning */
+@media (max-width: 800px) {
+    .single-product-page .product-back-arrow {
+        top: -38px;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+}
+
+
+
+
