@@ -1457,47 +1457,44 @@ img {
 }
 
 
-
-/* ================= SINGLE PRODUCT BACK ARROW ================= */
-.single-product-page .row {
-    position: relative;
-}
-
-/* Arrow button */
+/* ================= SINGLE PRODUCT BACK ARROW (FIXED & VISIBLE) ================= */
 .single-product-page .product-back-arrow {
-    position: absolute;
-    top: -45px;           /* places it above the image */
-    left: 0;
-    width: 40px;
-    height: 40px;
+    position: fixed;
+    top: 90px;                 /* below top bar */
+    left: 20px;
+
+    width: 44px;
+    height: 44px;
+
     background: #222;
     color: #fff;
-    font-size: 22px;
+    font-size: 24px;
     text-decoration: none;
+
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 9999;
+
     transition: background 0.3s ease, transform 0.2s ease;
-    z-index: 10;
 }
 
-/* Hover effect (desktop) */
+/* Hover (desktop) */
 .single-product-page .product-back-arrow:hover {
     background: #ff7200;
-    transform: translateX(-3px);
+    transform: translateX(-4px);
 }
 
-/* Mobile positioning */
+/* MOBILE ADJUSTMENT */
 @media (max-width: 800px) {
     .single-product-page .product-back-arrow {
-        top: -38px;
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
+        top: 16px;
+        left: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
     }
 }
-
-
-
-
