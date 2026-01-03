@@ -1483,7 +1483,7 @@ img {
     justify-content: center;
 
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    z-index: 10;
+    z-index: 5;
 
     transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -1491,7 +1491,7 @@ img {
 /* Hover (desktop only) */
 .single-product-page .product-back-arrow:hover {
     background: #ff7200;
-    transform: translateX(-4px);
+    transform: translateX(4px);
 }
 
 /* Mobile spacing tweak */
@@ -1526,4 +1526,24 @@ img {
 }
 
 
+/* ================= MOBILE ONLY — MOVE BACK ARROW TO PRODUCT DETAILS ================= */
+@media (max-width: 800px) {
+
+  /* Disable image-based positioning */
+  .single-product-page .col-2:first-child {
+    position: static;
+  }
+
+  /* Product details becomes the positioning context */
+  .single-product-page .product-details {
+    position: relative;
+  }
+
+  /* Move arrow to the right of product details */
+  .single-product-page .product-back-arrow {
+    top: -48px;
+    left: auto;
+    right: 0;
+  }
+}
 
