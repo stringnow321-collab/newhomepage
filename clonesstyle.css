@@ -1504,4 +1504,25 @@ img {
     }
 }
 
+/* ================= STICKY NAVBAR ABOVE PRODUCT IMAGE ================= */
+
+/* Height reference (matches your navbar height) */
+:root {
+  --navbar-height: 60px;
+}
+
+/* Make navbar sticky (NOT fixed) */
+.single-product-page .navbar {
+  position: sticky;
+  top: 0;                 /* sticks under top bar */
+  z-index: 1000;
+}
+
+/* Reserve space so content DOES NOT MOVE */
+.single-product-page .small-container.single-product {
+  padding-top: var(--navbar-height);
+  margin-top: calc(-1 * var(--navbar-height));
+}
+
+
 
