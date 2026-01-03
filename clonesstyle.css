@@ -1459,7 +1459,7 @@ img {
 
 
 /* ================= SINGLE PRODUCT BACK ARROW ================= */
-.single-product-page .image-gallery {
+.single-product-page .row {
     position: relative;
 }
 
