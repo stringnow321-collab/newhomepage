@@ -1396,7 +1396,7 @@ img {
     grid-template-rows: auto auto;
     gap: 12px;
     padding: 14px;
-    background: #4f6656; /* Hawthorne green */
+    background: black; /* Hawthorne green */
   }
 
   /* LOGO */
