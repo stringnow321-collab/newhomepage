@@ -481,3 +481,52 @@ body {
 }
 
 
+
+/* ===== DESKTOP LAYOUT IMPROVEMENTS ONLY ===== */
+@media (min-width: 901px) {
+
+  /* Full-width navbar to match top bar */
+  .navbar {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #222;
+  }
+
+  /* Keep menu centered nicely inside */
+  #MenuItems {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+
+@media (min-width: 901px) {
+
+  /* Flat modern container */
+  .main-content {
+    border-radius: 0;
+  }
+
+  .products-section {
+    border-radius: 0;
+  }
+}
+
+
+@media (min-width: 901px) {
+
+  /* Slight separation between top bar and nav */
+  .navbar {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  /* More breathing room for desktop content */
+  .main-content {
+    padding-top: 20px;
+  }
+}
+
