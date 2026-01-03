@@ -1463,7 +1463,7 @@ img {
 /* Back arrow */
 .single-product-page .product-back-arrow {
     position: absolute;
-    top: -18px;   /* inside image */
+    top: -180px;   /* inside image */
     left: 0;
 
     width: 42px;
@@ -1538,7 +1538,7 @@ img {
 
   /* Move arrow to the right of product details */
   .single-product-page .product-back-arrow {
-    top: -50px;
+    top: -35px;
     left: auto;
     right: 10px;
 
