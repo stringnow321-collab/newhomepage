@@ -1538,7 +1538,7 @@ img {
 
   /* Move arrow to the right of product details */
   .single-product-page .product-back-arrow {
-    top: -428px;
+    top: -50px;
     left: auto;
     right: 10px;
 
