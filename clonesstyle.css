@@ -1551,7 +1551,3 @@ img {
 }
 
 
-/* DESKTOP: anchor arrow to image column */
-.single-product-page .col-2:first-child {
-  position: relative;
-}
