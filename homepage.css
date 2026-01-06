@@ -32,14 +32,14 @@ body {
 }
 
 .search-input {
-    padding: 8px 12px;
+    padding: 12px 0;
     border-radius: 5px;
     border: none;
     width: 120px;
 }
 
 .search-btn {
-    padding: 2px 15px;
+    padding: 0 15px;
     background: #ff7200;
     color: #fff;
     border: none;
