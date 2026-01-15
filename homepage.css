@@ -549,7 +549,7 @@ body {
 }
 
 .dropdown-menu {
-    display: block;
+    display: none;
     position: absolute;
     background: #333;
     list-style: none;
