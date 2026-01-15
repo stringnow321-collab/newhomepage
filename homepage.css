@@ -617,3 +617,13 @@ body {
     z-index: 0;
 }
 
+
+@media (max-width: 800px) {
+    .dropdown-menu {
+        display: none;
+    }
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
