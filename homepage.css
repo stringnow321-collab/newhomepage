@@ -560,7 +560,7 @@ body {
 }
 
 .dropdown-menu a {
-    display: none;
+    display: block;
     padding: 8px 20px;
     color: #666;
 }
