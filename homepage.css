@@ -549,13 +549,9 @@ body {
 .dropdown {
     position: relative;
 }
-/* ▼ arrow */
-.dropdown>a::after {
-    font-size: 11px;
 
-}
 .dropdown-menu {
-    display: none;
+    display: block;
     position: absolute;
     background: #333;
     list-style: none;
