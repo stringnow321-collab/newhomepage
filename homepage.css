@@ -77,7 +77,9 @@ cart-icon {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 40px;
+    min-height: 60px;
+    height: auto;
+    z-index: 2000;
 }
 
 .menu-icon {
@@ -111,11 +113,6 @@ cart-icon {
     color: #ff7200;
 }
 
-/* ▼ arrow */
-.dropdown>a::after {
-    content: " ▼";
-    font-size: 11px;
-}
 
 /* ---------------------- DROPDOWN MENU ---------------------- */
 .dropdown-menu {
@@ -128,7 +125,7 @@ cart-icon {
     display: none;
     flex-direction: column;
     border: 1px solid #444;
-    z-index: 1000;
+    z-index: 3000;
 }
 
 .dropdown-menu li a {
@@ -508,13 +505,14 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    height: 60px;
     background: #222;
     padding: 12px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    min-height: 60px;
+    height: auto;
 }
 
 
