@@ -142,7 +142,7 @@ cart-icon {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: flex;
+    display: block;
 }
 
 /* ---------------------- SLIDESHOW ---------------------- */
@@ -167,7 +167,6 @@ cart-icon {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
-    overflow: hidden;
 }
 
 .slide {
