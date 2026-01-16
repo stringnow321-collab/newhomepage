@@ -695,9 +695,20 @@ body {
     border-bottom: 1px solid #333;
   }
 
-  /* More breathing room for desktop content */
-  .main-content {
- 
-  }
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+    overflow: visible;
+}
+
+@media (max-width: 800px) {
+    .dropdown-menu {
+        display: none;
+    }
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
