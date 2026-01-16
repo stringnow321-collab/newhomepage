@@ -583,22 +583,81 @@ body {
 @media (min-width: 901px) {
 
   /* Full-width navbar to match top bar */
-  .navbar {
-    max-width: none;
+.navbar {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #222;
-  }
-
-  /* Keep menu centered nicely inside */
-  #MenuItems {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    background: #222;
+    padding: 12px 0;
+    display: flex;
     justify-content: center;
-  }
+    align-items: center;
+    position: relative;
+    min-height: 60px;
+    height: auto;
+    z-index: 9999;
 }
 
+
+
+
+
+#MenuItems {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#MenuItems li {
+    position: relative;
+}
+
+#MenuItems > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+#MenuItems > li > a:hover {
+    color: #ff7200;
+}
+
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #333;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    left: 0;
+    top: 100%;
+    z-index: 10000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: #666;
+}
+
+.dropdown-menu a:hover {
+    color: #ff7200;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+}
 
 @media (min-width: 901px) {
 
