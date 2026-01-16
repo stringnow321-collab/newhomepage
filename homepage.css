@@ -32,23 +32,22 @@ body {
 }
 
 .search-input {
-    padding: 0 15px;
-    border-radius: 5px;
+    height: 40px;
+    padding: 0 12px;
     border: none;
-    width: 120px;
 }
 
 .search-btn {
-    padding: 15px 0;
+    height: 40px;
+    padding: 0 16px;
     background: #ff7200;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
 .search-btn:hover {
-    background: #ff8f33;
+    opacity: 0.9;
 }
 
 cart-icon {
