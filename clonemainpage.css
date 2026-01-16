@@ -12,18 +12,18 @@ body {
     padding-top: 0;
 }
 
-/* ---------- TOP BAR (MATCH CSS 2) ---------- */
+/* ---------------------- TOP BAR ---------------------- */
 .top-bar {
+    width: 100%;
+    background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: #222;
+    padding: 15px 40px;
 }
 
 .logo-img {
-    width: 340px;
-    height: 120px;
+    width: 120px;
 }
 
 .top-right {
@@ -51,38 +51,56 @@ body {
     opacity: 0.9;
 }
 
+cart-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#cart-count {
+    background: #ff7200;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
 
 /* ---------------------- NAVBAR ---------------------- */
-/* ---------------------- FIXED NAVBAR ---------------------- */
-/* ---------- NAVBAR (MATCH CSS 2) ---------- */
 .navbar {
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    height: 60px;
     background: #222;
     padding: 12px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    min-height: 60px;
+    height: auto;
+    z-index: 5000;
 }
 
-
-
-
+.menu-icon {
+    width: 32px;
+    position: absolute;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+}
 
 #MenuItems {
+    list-style: none;
     display: flex;
     gap: 40px;
-    list-style: none;
 }
 
 #MenuItems li {
     position: relative;
 }
 
-#MenuItems > li > a {
+#MenuItems>li>a {
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -91,39 +109,36 @@ body {
     transition: 0.3s;
 }
 
-#MenuItems > li > a:hover {
+#MenuItems>li>a:hover {
     color: #ff7200;
 }
 
 
-
-.dropdown {
-    position: relative;
-}
-/* ▼ arrow */
-.dropdown>a::after {
-    font-size: 11px;
-
-}
+/* ---------------------- DROPDOWN MENU ---------------------- */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    background: #333;
     list-style: none;
-    padding: 10px 0;
-    min-width: 180px;
-    left: 0;
+    background: #333;
+    position: absolute;
     top: 100%;
+    left: 0;
+    min-width: 160px;
+    display: none;
+    flex-direction: column;
+    border: 1px solid #444;
+    z-index: 3000;
 }
 
-.dropdown-menu a {
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
     display: block;
-    padding: 8px 20px;
-    color: #666;
+    transition: 0.3s;
 }
 
-.dropdown-menu a:hover {
-    color: #ff7200;
+.dropdown-menu li a:hover {
+    background: #ff7200;
+    color: #000;
 }
 
 .dropdown:hover .dropdown-menu {
