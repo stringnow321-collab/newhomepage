@@ -302,7 +302,6 @@ ul {
         left: 0;
         background: #333;
         width: 100%;
-        overflow: hidden;
         transition: max-height 0.5s;
     }
 }
@@ -789,7 +788,7 @@ th:last-child {
     }
 
     #MenuItems.active {
-        display: flex;
+        display: block;
     }
 
 }
@@ -1147,7 +1146,7 @@ img {
   height: auto;
 }
 
-.navbar,
+
 .small-container,
 .container {
   max-width: 100%;
