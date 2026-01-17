@@ -230,6 +230,43 @@ img {
     border-color: #ff7200;
 }
 
+
+/* Hide magnifier on mobile */
+@media (max-width: 768px) {
+    .zoom-wrapper {
+        cursor: default;
+    }
+
+    .zoom-wrapper.zoomed img {
+        transform: none;
+    }
+
+}
+
+
+/* Full image zoom container */
+.zoom-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+/* Zoomed state */
+.zoom-wrapper.zoomed {
+    cursor: zoom-out;
+}
+
+/* Zoomed image */
+.zoom-wrapper img {
+    transition: transform 0.3s ease, transform-origin 0.1s ease;
+}
+
+/* Zoom scale */
+.zoom-wrapper.zoomed img {
+    transform: scale(2);
+    /* adjust zoom level */
+}
+
 /* Slideshow arrows (optional) */
 .prev,
 .next {
