@@ -184,6 +184,103 @@ img {
 }
 
 /* ================= IMAGE GALLERY ================= */
+.slideshow a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow a.active {
+    opacity: 1;
+}
+
+/* ----------- SLIDESHOW WITH ARROWS ----------- */
+
+.slideshow {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+.slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.slideshow .slide.active {
+    opacity: 1;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrows */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 10px 15px;
+    color: white;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transform: translateY(-50%);
+    user-select: none;
+    font-weight: bold;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Make sure slides stay under arrows but clickable */
+.slideshow .slide {
+    z-index: 1;
+}
+
+.prev,
+.next {
+    z-index: 5;
+}
+
+
+.product-details h4 {
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+
 .small-container {
     max-width: 1200px;
     margin: auto;
@@ -364,3 +461,53 @@ ul {
 
 /* ================= MOBILE ================= */
 
+@media (max-width: 800px) {
+
+  /* ---------- NAVBAR (matches screenshot) ---------- */
+  .single-product .navbar {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding: 10px 12px;
+  }
+
+  /* Logo top-left */
+  .single-product .navbar .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Cart top-right */
+  .single-product .cart-dropdown,
+  .single-product .cart-icon {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    font-size: 20px;
+  }
+
+  /* Search full width under logo */
+  .single-product .search-bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .single-product .search-input {
+    width: 100%;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .single-product .search-btn {
+    height: 38px;
+  }
+
+  /* Hide hamburger + menu */
+  .single-product .menu-icon,
+  .single-product #MenuItems {
+    display: none !important;
+  }
