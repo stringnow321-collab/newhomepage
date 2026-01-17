@@ -1710,5 +1710,17 @@ img {
     z-index: 10001; /* higher than navbar */
 }
 
+/* FIX TOP BAR OVERFLOW (DESKTOP) */
+.top-bar {
+    flex-wrap: wrap;
+}
 
+.top-bar .search-input {
+    width: 220px;
+    max-width: 100%;
+}
+
+.top-bar .top-right {
+    flex-shrink: 0;
+}
 
