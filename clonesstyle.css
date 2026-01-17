@@ -1722,4 +1722,40 @@ img {
     }
 }
 
+@media (max-width: 800px) {
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    #MenuItems {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+
+        border-top: 1px solid #444;
+        z-index: 9999;
+    }
+
+    #MenuItems.active {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: #333;
+        border: none;
+        padding-left: 25px;
+    }
+}
+
 
