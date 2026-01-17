@@ -61,7 +61,7 @@ body {
     opacity: 0.9;
 }
 
-cart-icon {
+.cart-icon {
     font-size: 22px;
     color: white;
     cursor: pointer;
