@@ -1039,69 +1039,63 @@ th:last-child {
     padding: 20px;
 }
 
+/* ================= PRODUCT DETAILS GRID ================= */
 
-/* ================= PRODUCT DETAILS ================= */
-
-.product-specs {
+.product-details-grid {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  max-width: 500px;
+  grid-template-columns: 180px 1fr;
+  row-gap: 12px;
+  column-gap: 16px;
+  max-width: 600px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
 }
 
-/* each row */
-.spec-row {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  align-items: center;
-  padding: 10px 14px;
-  background: #f8f8f8;
-  border-radius: 6px;
-}
-
-/* label */
-.spec-label {
+/* LABELS */
+.product-details-grid .label {
   font-weight: 700;
   color: #000;
   font-size: 15px;
+  text-align: left;
+  align-self: center;
 }
 
-/* value */
-.spec-value {
+/* VALUES */
+.product-details-grid .value {
   font-size: 15px;
   color: #333;
+  line-height: 1.4;
+  align-self: center;
 }
 
-/* optional status colors */
-.spec-value.in-stock {
-  color: #0a8a2a;
-  font-weight: 600;
+/* subtle separators (modern look) */
+.product-details-grid .label,
+.product-details-grid .value {
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.spec-value.out-of-stock {
-  color: #c0392b;
-  font-weight: 600;
+/* remove border from last row */
+.product-details-grid .label:last-of-type,
+.product-details-grid .value:last-of-type {
+  border-bottom: none;
 }
-
-/* subtle hover */
-.spec-row:hover {
-  background: #f1f1f1;
-}
-
 
 @media (max-width: 600px) {
-  .spec-row {
+  .product-details-grid {
     grid-template-columns: 1fr;
-    gap: 6px;
+    padding: 14px;
   }
 
-  .spec-label {
+  .product-details-grid .label {
     font-size: 14px;
   }
 
-  .spec-value {
+  .product-details-grid .value {
     font-size: 15px;
+    padding-bottom: 10px;
   }
 }
 
