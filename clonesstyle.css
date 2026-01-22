@@ -1038,3 +1038,70 @@ th:last-child {
     margin: auto;
     padding: 20px;
 }
+
+
+/* ================= PRODUCT DETAILS ================= */
+
+.product-specs {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 500px;
+}
+
+/* each row */
+.spec-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  padding: 10px 14px;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+/* label */
+.spec-label {
+  font-weight: 700;
+  color: #000;
+  font-size: 15px;
+}
+
+/* value */
+.spec-value {
+  font-size: 15px;
+  color: #333;
+}
+
+/* optional status colors */
+.spec-value.in-stock {
+  color: #0a8a2a;
+  font-weight: 600;
+}
+
+.spec-value.out-of-stock {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* subtle hover */
+.spec-row:hover {
+  background: #f1f1f1;
+}
+
+
+@media (max-width: 600px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .spec-label {
+    font-size: 14px;
+  }
+
+  .spec-value {
+    font-size: 15px;
+  }
+}
+
