@@ -1102,9 +1102,8 @@ th:last-child {
 }
 
 @media (max-width: 800px) {
-  .product-back-arrow {
-    top: calc(100px + env(safe-area-inset-top));
+  .single-product-page .product-back-arrow {
+    top: calc(150px + env(safe-area-inset-top));
   }
 }
-
 
