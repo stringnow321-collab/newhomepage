@@ -786,6 +786,15 @@ ul {
   /* HIDE NAV MENU ON PRODUCT PAGE */
   .single-product-page nav.navbar {
     display: none;
+
+
+  .product-back-arrow {
+    top: calc(100px + env(safe-area-inset-top));
+  }
+
+
+
+    
   }
 }
 
