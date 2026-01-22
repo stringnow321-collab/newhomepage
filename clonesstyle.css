@@ -787,13 +787,6 @@ ul {
   .single-product-page nav.navbar {
     display: none;
 
-
-  .product-back-arrow {
-    top: calc(100px + env(safe-area-inset-top));
-  }
-
-
-
     
   }
 }
@@ -1107,4 +1100,11 @@ th:last-child {
     padding-bottom: 10px;
   }
 }
+
+@media (max-width: 800px) {
+  .product-back-arrow {
+    top: calc(100px + env(safe-area-inset-top));
+  }
+}
+
 
