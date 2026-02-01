@@ -1,0 +1,41 @@
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Top bar (logo only) */
+        .top-bar {
+            background-color: #fff;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+        }
+
+        /* Main content */
+        .terms-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .terms-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .terms-container p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
